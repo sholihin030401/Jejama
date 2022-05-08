@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lokasi"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="13sp"
+        android:alpha="0.8"/>
+
+    <TextView
+        android:id="@+id/tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bandar_lampung_lampung"
+        android:textColor="@color/text"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="13sp"
+        android:layout_below="@id/tx"
+        android:layout_marginStart="16dp"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx2"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/primary"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/info_result"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titles"
+                android:layout_margin="6dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/info"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_free"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="6dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cv_info"
+        android:layout_marginBottom="80dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp">
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/chipbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:padding="5dp"
+            app:cnb_addBottomInset="true"
+            app:cnb_addLeftInset="true"
+            app:cnb_addRightInset="true"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_menuResource="@menu/menu"/>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

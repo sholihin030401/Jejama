@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F5F5F5"
+    android:padding="12dp">
+
+    <View
+        android:id="@+id/bullets"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bullets" />
+
+    <RelativeLayout
+        android:id="@+id/clicklayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_toEndOf="@id/bullets"
+        android:background="@drawable/bg_square_white"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_solution"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_home" />
+
+        <TextView
+            android:id="@+id/tx1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/expand_menu"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toEndOf="@id/img_solution"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/solution1"
+            android:textColor="@color/text" />
+
+        <ImageView
+            android:id="@+id/arrow_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_arrow_down" />
+
+        <RelativeLayout
+            android:id="@+id/expand_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_solution">
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/post2" />
+
+            <TextView
+                android:id="@+id/intentdialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc"
+                android:text="@string/atur_alarm"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:layout_margin="6dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:background="@drawable/bg_square_true"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

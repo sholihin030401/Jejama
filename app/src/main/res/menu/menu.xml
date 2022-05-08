@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:cnb_iconColor="@color/secondary"/>
+
+    <item
+        android:id="@+id/konsul"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat"
+        app:cnb_iconColor="@color/secondary"/>
+
+    <item
+        android:id="@+id/forum"
+        android:icon="@drawable/ic_forum"
+        android:title="@string/forum"
+        app:cnb_iconColor="@color/secondary"/>
+
+    <item
+        android:id="@+id/artikel"
+        android:icon="@drawable/ic_article"
+        android:title="@string/artikel"
+        app:cnb_iconColor="@color/secondary"/>
+</menu>
